@@ -26,7 +26,7 @@
                 <td><%# Item.Field<string>("ISBN") %></td>
                 <td><%# Item.Field<string>("AuthorName") %></td>
                 <td>
-                    <asp:HyperLink runat="server" NavigateUrl='<%# $"~/BooksEdit.aspx?ID={Item.Field<int>("id")}" %>' Text="Edit" /></td>
+                    <asp:HyperLink runat="server" NavigateUrl='<%# $"~/BookDetails.aspx?ID={Item.Field<int>("ID")}" %>' Text="Details" /></td>
             </tr>
         </ItemTemplate>
         <FooterTemplate>

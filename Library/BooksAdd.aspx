@@ -17,7 +17,9 @@
             </div>
 
             <div>
-                <asp:DropDownList ID="AuthorDropDownList" AutoPostBack="false" runat="server" />
+                <asp:DropDownList ID="AuthorDropDownList" AutoPostBack="false" runat="server">
+                    <asp:ListItem></asp:ListItem>
+                </asp:DropDownList>
 
             </div>
         </fieldset>

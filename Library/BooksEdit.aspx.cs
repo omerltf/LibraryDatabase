@@ -30,16 +30,16 @@ namespace Library
 
                 AuthorDropDownList.DataTextField = "Name";
                 AuthorDropDownList.DataValueField = "Id";
-
+                AuthorDropDownList.AppendDataBoundItems = true;
 
                 AuthorDropDownList.DataSource = dt;
                 AuthorDropDownList.DataBind();
 
                 DataTable dataTable = DatabaseHelper.Retrieve(@"
-                    select id, Title, ISBN
+                    select ID, Title, ISBN
                     from Book
-                    where id = @id
-                ", new SqlParameter("@id", bookId));
+                    where ID = @ID
+                ", new SqlParameter("@ID", bookId));
 
                 if (dataTable.Rows.Count == 1)
                 {
@@ -64,11 +64,11 @@ namespace Library
                 Title=@Title,
                 ISBN=@ISBN,
                 AuthorID=@AuthorID
-                where id = @id
+                where ID = @ID
             ",
                 new SqlParameter("@Title", bookTitle),
                 new SqlParameter("@ISBN", bookISBN),
-                new SqlParameter("@id",bookId),
+                new SqlParameter("@ID",bookId),
                 new SqlParameter("@AuthorID", int.Parse(authorID)));
 
             Response.Redirect("~/BooksList.aspx");

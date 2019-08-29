@@ -8,5 +8,7 @@
         <asp:hyperlink id="AuthorHyperLink" navigateurl="~/AuthorsList.aspx" text="Add/Edit Author" runat="server" />
         <br />
         <asp:hyperlink id="BookHyperLink" navigateurl="~/BooksList.aspx" text="Add/Edit Books" runat="server" />
+        <br />
+        <asp:hyperlink id="LibraryHyperLink" navigateurl="~/LibraryList.aspx" text="Add/Edit Library" runat="server" />
     </div>
 </asp:Content>

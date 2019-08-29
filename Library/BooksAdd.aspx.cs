@@ -24,7 +24,7 @@ namespace Library
 
                 AuthorDropDownList.DataTextField = "Name";
                 AuthorDropDownList.DataValueField = "Id";
-
+                AuthorDropDownList.AppendDataBoundItems = true;
 
                 AuthorDropDownList.DataSource = dt;
                 AuthorDropDownList.DataBind();
