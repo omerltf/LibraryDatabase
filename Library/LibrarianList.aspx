@@ -3,8 +3,8 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-
-    <div>
+    <h2 class="py-3">Librarians</h2>
+    <div class="p-4">
         <asp:Label ID="PatronDropDownListLabel" runat="server" Text="Patrons: " AssociatedControlID="PatronDropDownList" />
         <asp:DropDownList ID="PatronDropDownList" AutoPostBack="false" runat="server">
             <asp:ListItem></asp:ListItem>
@@ -26,7 +26,8 @@
     <div>
         <asp:Repeater ID="LibrarianRepeater" runat="server" ItemType="DataRow">
             <HeaderTemplate>
-                <table>
+                <table class="table table-sm table-striped table-hover">
+            <thead class="thead-dark">
                     <tr>
                         <th>First Name</th>
                         <th>Last Name</th>
@@ -34,6 +35,8 @@
                         <th>Library Card Number</th>
                         <th>Employee Number</th>
                     </tr>
+                </thead>
+                    <tbody>
             </HeaderTemplate>
             <ItemTemplate>
                 <tr>
@@ -42,10 +45,11 @@
                     <td> <%# Item.Field<string>("BranchName") %>  </td>
                     <td> <%# Item.Field<int>("LibraryCardNumber") %>  </td>
                     <td> <%# Item.Field<int>("EmployeeNumber") %>  </td>
-                    <td> <asp:HyperLink runat="server" NavigateUrl='<%# $"~/LibrarianEdit.aspx?EmployeeNumber={Item.Field<int>("EmployeeNumber")}" %>' Text="Edit" /></td>
+                    <td class="text-right pr-4"> <asp:HyperLink runat="server" cssclass="btn btn-secondary btn-sm" NavigateUrl='<%# $"~/LibrarianEdit.aspx?EmployeeNumber={Item.Field<int>("EmployeeNumber")}" %>' Text="Edit" /></td>
                 </tr>
             </ItemTemplate>
             <FooterTemplate>
+                </tbody>
                 </table>
             </FooterTemplate>
         </asp:Repeater>
