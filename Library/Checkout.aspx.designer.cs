@@ -10,7 +10,25 @@
 namespace Library {
     
     
-    public partial class LibrarianList {
+    public partial class Checkout {
+        
+        /// <summary>
+        /// LibrarianDropDownListLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LibrarianDropDownListLabel;
+        
+        /// <summary>
+        /// LibrarianDropDownList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList LibrarianDropDownList;
         
         /// <summary>
         /// PatronDropDownListLabel control.
@@ -31,39 +49,30 @@ namespace Library {
         protected global::System.Web.UI.WebControls.DropDownList PatronDropDownList;
         
         /// <summary>
-        /// LibraryDropDownListLabel control.
+        /// AvailableLibrariesDropDownListLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LibraryDropDownListLabel;
+        protected global::System.Web.UI.WebControls.Label AvailableLibrariesDropDownListLabel;
         
         /// <summary>
-        /// LibraryDropDownList control.
+        /// AvailableLibrariesDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList LibraryDropDownList;
+        protected global::System.Web.UI.WebControls.DropDownList AvailableLibrariesDropDownList;
         
         /// <summary>
-        /// AddLibrarianButton control.
+        /// CheckoutButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddLibrarianButton;
-        
-        /// <summary>
-        /// LibrarianRepeater control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater LibrarianRepeater;
+        protected global::System.Web.UI.WebControls.Button CheckoutButton;
     }
 }

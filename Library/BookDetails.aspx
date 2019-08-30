@@ -55,6 +55,9 @@
                 <td><asp:Button ID="DeleteButton" Text="Delete Record" OnClick="DeleteButton_Click" runat="server" /></td>
             </tr>
         </ItemTemplate>
+        <FooterTemplate>
+            </table>
+        </FooterTemplate>
     </asp:Repeater>
     </div>
 </asp:Content>

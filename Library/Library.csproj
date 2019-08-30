@@ -73,6 +73,7 @@
     <Content Include="BooksAdd.aspx" />
     <Content Include="BooksEdit.aspx" />
     <Content Include="BooksList.aspx" />
+    <Content Include="Checkout.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="LibrarianEdit.aspx" />
     <Content Include="LibrarianList.aspx" />
@@ -145,6 +146,13 @@
     </Compile>
     <Compile Include="BooksList.aspx.designer.cs">
       <DependentUpon>BooksList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Data\DatabaseHelper.cs" />
     <Compile Include="Default.aspx.cs">

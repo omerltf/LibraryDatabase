@@ -64,7 +64,9 @@ namespace Library
                     select b.Id, b.LibraryId, b.Available, a.BranchName as BranchName
                     from BookCopy b
                     join Library a on b.LibraryId = a.Id
-                ");
+                    where b.BookID=@bookId
+                ",
+                    new SqlParameter("@BookID", bookId));
             BookCopyRepeater.DataSource = data.Rows;
             BookCopyRepeater.DataBind();
         }
