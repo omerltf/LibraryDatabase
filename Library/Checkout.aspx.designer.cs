@@ -10,87 +10,69 @@
 namespace Library {
     
     
-    public partial class Site {
+    public partial class Checkout {
         
         /// <summary>
-        /// head control.
+        /// LibrarianDropDownListLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label LibrarianDropDownListLabel;
         
         /// <summary>
-        /// AuthorHyperLink control.
+        /// LibrarianDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AuthorHyperLink;
+        protected global::System.Web.UI.WebControls.DropDownList LibrarianDropDownList;
         
         /// <summary>
-        /// BookHyperLink control.
+        /// PatronDropDownListLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink BookHyperLink;
+        protected global::System.Web.UI.WebControls.Label PatronDropDownListLabel;
         
         /// <summary>
-        /// LibraryHyperLink control.
+        /// PatronDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LibraryHyperLink;
+        protected global::System.Web.UI.WebControls.DropDownList PatronDropDownList;
         
         /// <summary>
-        /// LibrarianHyperLink control.
+        /// AvailableLibrariesDropDownListLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LibrarianHyperLink;
+        protected global::System.Web.UI.WebControls.Label AvailableLibrariesDropDownListLabel;
         
         /// <summary>
-        /// PatronHyperLink control.
+        /// AvailableLibrariesDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PatronHyperLink;
+        protected global::System.Web.UI.WebControls.DropDownList AvailableLibrariesDropDownList;
         
         /// <summary>
-        /// CheckoutHyperLink control.
+        /// CheckoutButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CheckoutHyperLink;
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// main control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder main;
+        protected global::System.Web.UI.WebControls.Button CheckoutButton;
     }
 }

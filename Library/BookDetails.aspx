@@ -4,7 +4,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
 
-    <h2>Book Details</h2>
+    <h2 class="py-3">Book Details</h2>
 
     <fieldset>
         <legend>Information</legend>
@@ -55,6 +55,9 @@
                 <td><asp:Button ID="DeleteButton" Text="Delete Record" OnClick="DeleteButton_Click" runat="server" /></td>
             </tr>
         </ItemTemplate>
+        <FooterTemplate>
+            </table>
+        </FooterTemplate>
     </asp:Repeater>
     </div>
 </asp:Content>
