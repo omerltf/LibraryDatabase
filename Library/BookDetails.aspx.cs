@@ -53,7 +53,20 @@ namespace Library
                 LibraryDropDownList.AppendDataBoundItems = true;
                 LibraryDropDownList.DataSource = dt;
                 LibraryDropDownList.DataBind();
+
+                BindBookCopyList();
             }
+        }
+
+        private void BindBookCopyList()
+        {
+            DataTable data = DatabaseHelper.Retrieve(@"
+                    select b.Id, b.LibraryId, b.Available, a.BranchName as BranchName
+                    from BookCopy b
+                    join Library a on b.LibraryId = a.Id
+                ");
+            BookCopyRepeater.DataSource = data.Rows;
+            BookCopyRepeater.DataBind();
         }
 
         protected void Edit_Click (object sender, EventArgs e)
@@ -69,16 +82,46 @@ namespace Library
         protected void AddBookButton_Click(object sender, EventArgs e)
         {
             int libraryId = int.Parse(LibraryDropDownList.SelectedValue);   //this gets selected libraryID
+            string branchName = LibraryDropDownList.SelectedItem.Text;
+            int? id = DatabaseHelper.Insert(@"
+                insert into BookCopy (BookID, LibraryID, Available)
+                values (@BookID, @LibraryID, 1);
+            ",
+                new SqlParameter("@BookID", bookId),
+                new SqlParameter("@LibraryID", libraryId));
+
+            Response.Redirect("~/BookDetails.aspx");
+        }
+
+        protected void NotAvailabilityButton_Click(object sender, EventArgs e)
+        {
+            HandleAvailabitilityButtonClick(sender, false);
         }
 
         protected void AvailabilityButton_Click(object sender, EventArgs e)
         {
+            HandleAvailabitilityButtonClick(sender, true);
+        }
 
+        private void HandleAvailabitilityButtonClick(object sender, bool available)
+        {
+            Button button = (Button)sender;
+            int bookCopyId = int.Parse(button.CommandArgument);
+
+            DatabaseHelper.Update(@"
+                update BookCopy set Available = @Available
+                where Id = @BookCopyId    
+            ",
+            new SqlParameter("@Available", available),
+            new SqlParameter("@BookCopyId", bookCopyId));
+            BindBookCopyList();
         }
 
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }

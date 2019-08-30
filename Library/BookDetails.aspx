@@ -50,7 +50,8 @@
         <ItemTemplate>
             <tr>
                 <td><%# Item.Field<string>("BranchName") %></td>
-                <td><asp:Button ID="AvailabilityButton" Text="Not Available" OnClick="AvailabilityButton_Click" runat="server" /></td>
+                <td><asp:Button ID="NotAvailabilityButton" CommandArgument='<%# Item.Field<int>("Id") %>' Text="Make Not Available" Visible='<%# Item.Field<bool>("Available") %>' OnClick="NotAvailabilityButton_Click" runat="server" /></td>
+                <td><asp:Button ID="AvailabilityButton" CommandArgument='<%# Item.Field<int>("Id") %>' Text="Make Available" Visible='<%# !Item.Field<bool>("Available") %>' OnClick="AvailabilityButton_Click" runat="server" /></td>
                 <td><asp:Button ID="DeleteButton" Text="Delete Record" OnClick="DeleteButton_Click" runat="server" /></td>
             </tr>
         </ItemTemplate>

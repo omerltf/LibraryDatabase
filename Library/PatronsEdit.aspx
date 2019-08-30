@@ -1,13 +1,22 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LibraryAdd.aspx.cs" Inherits="Library.LibraryAdd" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PatronsEdit.aspx.cs" Inherits="Library.PatronsEdit" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-
-    <h2>Add Library</h2>
+    <h2>Edit Library</h2>
 
     <fieldset>
 
         <div>
-            <asp:label id="BranchNameLabel" runat="server" associatedcontrolid="BranchName" text="Branch Name: " />
-            <asp:textbox id="BranchName" runat="server" />
+            <asp:label id="FirstNameLabel" runat="server" associatedcontrolid="FirstName" text="First Name: " />
+            <asp:textbox id="FirstName" runat="server" />
+        </div>
+
+        <div>
+            <asp:label id="LastNameLabel" runat="server" associatedcontrolid="LastName" text="Last Name: " />
+            <asp:textbox id="LastName" runat="server" />
+        </div>
+
+        <div>
+            <asp:label id="EmailAddressLabel" runat="server" associatedcontrolid="EmailAddress" text="Email Address: " />
+            <asp:textbox id="EmailAddress" runat="server" />
         </div>
 
         <div>
@@ -39,5 +48,7 @@
 
     <div>
         <asp:button id="Save" runat="server" text="Save" onclick="Save_Click" />
+        <asp:button id="Cancel" runat="server" text="Cancel" onclick="Cancel_Click" />
     </div>
+
 </asp:Content>

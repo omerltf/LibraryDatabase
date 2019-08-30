@@ -74,10 +74,15 @@
     <Content Include="BooksEdit.aspx" />
     <Content Include="BooksList.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="LibrarianEdit.aspx" />
+    <Content Include="LibrarianList.aspx" />
     <Content Include="LibraryAdd.aspx" />
     <Content Include="LibraryEdit.aspx" />
     <Content Include="LibraryList.aspx" />
     <Content Include="packages.config" />
+    <Content Include="PatronsAdd.aspx" />
+    <Content Include="PatronsEdit.aspx" />
+    <Content Include="PatronsList.aspx" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -152,6 +157,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LibrarianEdit.aspx.cs">
+      <DependentUpon>LibrarianEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibrarianEdit.aspx.designer.cs">
+      <DependentUpon>LibrarianEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LibrarianList.aspx.cs">
+      <DependentUpon>LibrarianList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LibrarianList.aspx.designer.cs">
+      <DependentUpon>LibrarianList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LibraryAdd.aspx.cs">
       <DependentUpon>LibraryAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,6 +191,27 @@
     </Compile>
     <Compile Include="LibraryList.aspx.designer.cs">
       <DependentUpon>LibraryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatronsAdd.aspx.cs">
+      <DependentUpon>PatronsAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatronsAdd.aspx.designer.cs">
+      <DependentUpon>PatronsAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatronsEdit.aspx.cs">
+      <DependentUpon>PatronsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatronsEdit.aspx.designer.cs">
+      <DependentUpon>PatronsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatronsList.aspx.cs">
+      <DependentUpon>PatronsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatronsList.aspx.designer.cs">
+      <DependentUpon>PatronsList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
