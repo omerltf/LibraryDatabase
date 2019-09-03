@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -15,6 +16,7 @@ namespace Library
         int libraryCardNumber = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!int.TryParse(Request.QueryString["LibraryCardNumber"], out libraryCardNumber))
             {
                 Response.Redirect("~/PatronsList.aspx");

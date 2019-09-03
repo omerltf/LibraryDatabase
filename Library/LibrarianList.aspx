@@ -9,7 +9,6 @@
         <asp:DropDownList ID="PatronDropDownList" AutoPostBack="false" runat="server">
             <asp:ListItem></asp:ListItem>
         </asp:DropDownList>
-
     </div>
 
     <div>
@@ -17,6 +16,11 @@
         <asp:DropDownList ID="LibraryDropDownList" runat="server" AutoPostBack="false">
             <asp:ListItem></asp:ListItem>
         </asp:DropDownList>
+    </div>
+
+    <div class="p-4">
+        <asp:Label ID="PasswordLabel" runat="server" Text="Password: " AssociatedControlID="PasswordTextBox" />
+        <asp:TextBox ID="PasswordTextBox" TextMode="Password" runat="server" />
     </div>
 
     <div>
