@@ -43,6 +43,22 @@
 
 
     <form id="form1" runat="server">
+        <header style="float: right;">
+            <asp:LoginView runat="server">
+            <LoggedInTemplate>
+                Hello, <asp:LoginName runat="server" />.
+                <asp:Button
+                    ID="Logout"
+                    Text="Logout"
+                    OnClick="Logout_Click"
+                    runat="server" />
+            </LoggedInTemplate>
+            <AnonymousTemplate>
+                <asp:HyperLink Text="Login" NavigateUrl="~/Login.aspx" runat="server" />
+            </AnonymousTemplate>
+        </asp:LoginView>
+        </header>
+
         <div class="container-fluid p-4">
             <asp:ContentPlaceHolder ID="main" runat="server">
             </asp:ContentPlaceHolder>

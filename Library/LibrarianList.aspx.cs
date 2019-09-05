@@ -5,8 +5,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BCrypt.Net;
 
 namespace Library
 {
@@ -14,6 +16,7 @@ namespace Library
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                 DataTable dt = DatabaseHelper.Retrieve(@"
@@ -38,7 +41,6 @@ namespace Library
                 LibraryDropDownList.DataSource = dataTable;
                 LibraryDropDownList.DataBind();
 
-
                 DataTable data = DatabaseHelper.Retrieve(@"
                     select p.FirstName, p.LastName, l.BranchName, p.LibraryCardNumber, li.EmployeeNumber 
                     from Librarian li
@@ -54,13 +56,22 @@ namespace Library
         {
             int libraryId = int.Parse(LibraryDropDownList.SelectedValue);   //this gets selected libraryID
             int libraryCardNumber = int.Parse(PatronDropDownList.SelectedValue); //this gets patron's library card number
+           
+            string password = PasswordTextBox.Text;
+            if (string.IsNullOrEmpty(password))
+            {
+                Response.Redirect("~/LibrarianList.aspx");
+            }
+
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
 
             int? id = DatabaseHelper.Insert(@"
-                insert into Librarian (LibraryID, LibraryCardNumber)
-                values (@LibraryID, @LibraryCardNumber);
+                insert into Librarian (LibraryID, LibraryCardNumber, Password)
+                values (@LibraryID, @LibraryCardNumber, @Password);
             ",
                 new SqlParameter("@LibraryID", libraryId),
-                new SqlParameter("@LibraryCardNumber", libraryCardNumber));
+                new SqlParameter("@LibraryCardNumber", libraryCardNumber),
+                new SqlParameter("@Password", hashedPassword));
             Response.Redirect("~/LibrarianList.aspx");
         }
     }
